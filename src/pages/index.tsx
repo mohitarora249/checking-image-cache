@@ -29,7 +29,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <img src={url} height={500} width={500} />
+        <img
+          src={url}
+          height={500}
+          width={500}
+          alt="photo of a dog kissing a girl"
+        />
       </main>
     </>
   );
