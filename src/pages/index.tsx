@@ -1,6 +1,12 @@
 import Head from "next/head";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const getInitialImg = () => {
+    return "https://res.cloudinary.com/da0bwxike/image/upload/v1680709774/cld-sample-5.jpg";
+  };
+  const [url, setUrl] = useState(() => getInitialImg());
+
   return (
     <>
       <Head>
@@ -10,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <img src="" />
+        <img src={url} height={500} width={500} />
       </main>
     </>
   );
