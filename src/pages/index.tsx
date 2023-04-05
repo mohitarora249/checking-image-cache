@@ -5,7 +5,17 @@ export default function Home() {
   const getInitialImg = () => {
     return "https://res.cloudinary.com/da0bwxike/image/upload/v1680709774/cld-sample-5.jpg";
   };
+
   const [url, setUrl] = useState(() => getInitialImg());
+
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setUrl(
+        "https://res.cloudinary.com/da0bwxike/image/upload/v1680709772/cld-sample.jpg"
+      );
+    }, 1000);
+    return () => clearTimeout(id);
+  }, []);
 
   return (
     <>
