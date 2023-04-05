@@ -20,6 +20,10 @@ export default function Home() {
   return (
     <>
       <Head>
+        <meta
+          name="google-site-verification"
+          content="zwIVyOQOxjDGxqlOy9R6PMjVy8bCiKRzy8pNSqp9Kqc"
+        />
         <title>Progressive image loading</title>
         <meta
           name="description"
