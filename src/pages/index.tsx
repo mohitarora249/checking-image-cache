@@ -3,7 +3,20 @@ import { useEffect, useState } from "react";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
-  const getInitialImg = () => {
+
+
+function waitForNMilliseconds(n:number) {
+   return new Promise((resolve, reject) => {
+     setTimeout(() => {
+       resolve('done!');
+     }, n);
+   });
+}
+
+  const getInitialImg = async () => {
+
+
+const result = await waitForNMilliseconds(500);
     return "https://res.cloudinary.com/da0bwxike/image/upload/v1680709774/cld-sample-5.jpg";
   };
   const [isBlur, setIsBlur] = useState(true);
