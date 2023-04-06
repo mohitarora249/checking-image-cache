@@ -13,11 +13,10 @@ function waitForNMilliseconds(n:number) {
    });
 }
 
-  const getInitialImg = async () => {
+  const getInitialImg = () => {
 
 
-const result = await waitForNMilliseconds(500);
-    return "https://res.cloudinary.com/da0bwxike/image/upload/v1680709774/cld-sample-5.jpg";
+return waitForNMilliseconds(500).then(_ =>  "https://res.cloudinary.com/da0bwxike/image/upload/v1680709774/cld-sample-5.jpg");
   };
   const [isBlur, setIsBlur] = useState(true);
   const [url, setUrl] = useState(() => getInitialImg());
